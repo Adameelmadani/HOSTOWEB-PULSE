@@ -1,0 +1,106 @@
+article {
+  display: flex;
+  justify-content: center;
+}
+.auth-container {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+  overflow: hidden; /* Ensures the shadow follows the rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 40%;
+  border-radius: 20px;
+  padding: 30px;
+}
+.auth-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(21, 22, 33);
+  margin-bottom: 10px;
+}
+.auth-container .auth-input {
+  border: 1px rgb(219, 219, 219) solid;
+  width: 300px;
+  border-radius: 25px;
+  padding: 0 12px 0 12px;
+}
+.auth-container .auth-input input {
+  outline: none;
+  padding: 12px;
+  color: rgb(21, 22, 33);
+  font-weight: 600;
+  font-size: 16px;
+  width: 250px;
+  cursor: text;
+  border: none;
+}
+.auth-container .auth-input i {
+  color: #88d417;
+  margin-left: 5px;
+}
+.auth-container div button {
+  border: none;
+  background-image: linear-gradient(to right, #88d417, #80ac0d);
+  width: 200px;
+  padding: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.auth-container div button:hover {
+  background-image: linear-gradient(to right, #95e719, #93c70f);
+}
+.auth-container .auth-subtext span {
+  font-size: 14px;
+  color: rgb(143, 162, 171);
+}
+.auth-container .auth-subtext a {
+  font-size: 14px;
+  color: #88d417;
+  cursor: pointer;
+}
+
+.auth-error {
+  display: none;
+  background-color: rgb(172, 0, 0);
+  padding: 4px 8px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+.auth-error i {
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .auth-container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 450px) {
+  .auth-container .auth-input {
+    width: 200px;
+  }
+  .auth-container .auth-input input {
+    font-size: 14px;
+    width: 150px;
+  }
+  .auth-container div button {
+    font-size: 14px;
+    width: 150px;
+  }
+  .auth-container .auth-subtext span {
+    font-size: 12px;
+  }
+  .auth-container .auth-subtext a {
+    font-size: 12px;
+  }
+  .auth-error {
+    font-size: 12px;
+  }
+}

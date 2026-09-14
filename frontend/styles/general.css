@@ -1,0 +1,21 @@
+/* variables */
+:root {
+  --primary-color: white;
+  --secondary-color: rgb(10, 46, 65);
+  --tertiary-color: rgb(136, 212, 23);
+}
+
+/* all */
+* {
+  font-family: Quicksand,sans-serif;
+  color: var(--primary-color);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* body */
+body {
+  padding: 0px;
+  margin: 0;
+  background-color: rgb(242, 247, 251);
+}

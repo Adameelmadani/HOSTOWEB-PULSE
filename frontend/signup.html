@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/auth-header.css">
+    <link rel="stylesheet" href="styles/auth.css">
+    <title>HOSTOWEB PULSE Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <div class="header-title">
+        <div class="header-logo-container">
+          <img class="logo-b" src="assets/imgs/logo-w.png">
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="after-header"></div>
+      <article>
+        <div class="auth-container">
+          <div class="auth-title">Sign Up</div>
+          <div class="auth-error">
+            <!-- Filled with JS -->
+          </div>
+          <div class="auth-input"><i class="fa-solid fa-user"></i><input placeholder="Username" class="username"></div>
+          <div class="auth-input"><i class="fa-solid fa-lock"></i><input placeholder="Password" type="password" class="password"></div>
+          <div><button>CREATE ACCOUNT</button></div>
+          <div class="auth-subtext"><span>Already have an account?</span> <a href="./signin.html">Sign in</a></div>
+        </div>
+      </article>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script type="module" src="scripts/data-fetcher/signup.js"></script>
+  </body>
+</html>

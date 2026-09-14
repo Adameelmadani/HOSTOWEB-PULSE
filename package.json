@@ -1,0 +1,24 @@
+{
+  "name": "hostoweb-pulse",
+  "version": "1.0.0",
+  "description": "Provides real-time insights into web hosting companies by aggregating data on ads, domain extension pricing, blog updates, product offerings (shared hosting, cloud VPS, reseller WHM, dedicated servers), social media follower counts, and security offers through APIs and web scraping.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "google-ads-api": "^16.0.0-rest-beta3",
+    "google-auth-library": "^9.13.0",
+    "jsdom": "^24.1.1",
+    "mongodb": "^6.8.0",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^23.3.0"
+  }
+}

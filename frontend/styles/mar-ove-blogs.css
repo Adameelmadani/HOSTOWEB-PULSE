@@ -1,0 +1,45 @@
+/* Market Overview Blogs */
+.blogs-container {
+  margin-top: 20px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.blogs-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.blogs-title div {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  background: var(--tertiary-color);
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+.hosting-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hosting-chart-container {
+  position: relative;
+  width: 100%;
+  height: 385px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 1px 15px rgba(15, 24, 51, .11);
+  cursor: pointer;
+}
+.hosting-chart-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .hosting-chart-container {
+    height: 300px;
+  }
+}

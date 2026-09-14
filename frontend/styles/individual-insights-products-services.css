@@ -1,0 +1,145 @@
+/* Dashboard */
+/* Extensions Price HT */
+.table-extensions-price-ht-div {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  box-shadow: 0 1px 15px rgba(15, 24, 51, .11);
+  background-color: white;
+  border-radius: 20px;
+}
+.table-extensions-price-ht {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+}
+.table-extensions-price-ht thead tr {
+  text-align: left;
+  border-bottom: 2px solid rgb(222, 226, 230);
+}
+.domain-names div{
+  width: fit-content;
+  height: fit-content;
+  padding: 2px 6px;
+  font-weight: 700;
+}
+.table-extensions-price-ht th ,
+.table-extensions-price-ht td {
+  padding: 12px 14px;
+}
+.table-extensions-price-ht tbody tr {
+  border-top: 1px solid rgb(222, 226, 230);
+}
+
+/* Products */
+.hosting-products {
+  margin-top: 50px;
+}
+.hosting-products-div-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+}
+.hosting-products-titles {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 12px 14px;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+}
+.shared-hosting,
+.cloud-vps,
+.whm-reseller,
+.dedicated-servers {
+  background-color: white;
+  border-radius: 20px;
+  height: max-content;
+  box-shadow: 0 1px 15px rgba(15, 24, 51, .11);
+}
+.shared-hosting,
+.cloud-vps,
+.whm-reseller {
+  margin-bottom: 50px;
+}
+.hosting-products-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.hosting-products-table thead tr {
+  text-align: left;
+  border-bottom: 4px solid var(--tertiary-color);
+}
+.hosting-products-table th ,
+.hosting-products-table td {
+  padding: 10px 12px;
+}
+.hosting-products-table tbody tr {
+  border-top: 1px solid var(--tertiary-color);
+}
+
+/* Security Offers */
+.security-offers {
+  margin-top: 50px;
+}
+.security-offers-div-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+}
+.rapid-ssl,
+.geotrust,
+.digicert {
+  background-color: white;
+  height: max-content;
+  border-radius: 20px;
+  border: 4px solid;
+  box-shadow: 0 1px 15px rgba(15, 24, 51, .11);
+}
+.rapid-ssl {
+  border-color: rgb(117, 76, 41);
+}
+.geotrust {
+  border-color: rgb(241, 90, 41);
+}
+.digicert {
+  border-color: rgb(1, 116, 195);
+}
+.rapid-ssl,
+.geotrust {
+  margin-bottom: 50px;
+}
+.security-offers-titles {
+  text-align: center;
+  padding: 10px;
+}
+.security-offers-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+}
+.rapid-ssl thead {
+  background-color: rgb(117, 76, 41);
+}
+.geotrust thead {
+  background-color: rgb(241, 90, 41);
+}
+.digicert thead {
+  background-color: rgb(1, 116, 195);
+}
+.security-offers-table thead tr {
+  text-align: left;
+  border-bottom: 3px solid rgb(222, 226, 230);
+}
+.security-offers-table th ,
+.security-offers-table td {
+  padding: 12px 14px;
+}
+.security-offers-table th {
+  color: white;
+}
+.table-security-offers tbody tr {
+  border-top: 1px solid rgb(222, 226, 230);
+}

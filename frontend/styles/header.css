@@ -1,0 +1,515 @@
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 114px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(255, 255, 255, .05);
+  background-color: transparent;
+  transition: background-color .2s ease-in-out, border-color .2 ease-in-out;
+}
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 70px;
+  cursor: pointer;
+  height: 70px;
+}
+.header-logo-container {
+  height: 100%;
+  position: relative;
+}
+.header-title img{
+  height: 100%;
+  transition: opacity .1s ease-in-out;
+}
+.header-title .logo-w {
+  position: absolute;
+  opacity: 1;
+}
+.header-title .logo-b {
+  position: absolute;
+  opacity: 0;
+}
+.individual-insights-container,
+.market-overview-container,
+.header-notification-container {
+  display: inline-block;
+  position: relative;
+}
+.ind-ove-button {
+  margin-left: 14.4px;
+  margin-right: 14.4px;
+  padding-top: 8px;
+  padding-bottom: 0px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  background-color: transparent;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: transparent;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  text-align: left;
+}
+.ind-ove-button:hover {
+  border-bottom-color: var(--tertiary-color);
+}
+.ind-ove-button p {
+  margin: 0;
+  opacity: 0.97;
+}
+.ind-ove-button p:hover {
+  opacity: 1;
+}
+.ind-ove-parts,
+.notification-messages {
+  position: absolute;
+  top: 36px;
+  left: -30px;
+  margin-top: 25px;
+  padding: 8px 1px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: white;
+  width: 300px;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.11), /* bottom shadow */
+  -10px 0 10px -10px rgba(0, 0, 0, 0.11), /* left shadow */
+  10px 0 10px -10px rgba(0, 0, 0, 0.11);  /* right shadow */
+}
+.notification-messages {
+  left: -210px;
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 7px;
+}
+.notification-messages::-webkit-scrollbar {
+  width: 14px; /* Adjust scrollbar width */
+}
+.notification-messages::-webkit-scrollbar-track {
+  border-radius: 7px;
+  background: #f1f1f1;
+}
+.notification-messages::-webkit-scrollbar-thumb {
+  background: #888; /* Background color of the scrollbar thumb */
+  border-radius: 20px; /* Border radius of the thumb */
+  border: 3px solid #f1f1f1; /* Adds some spacing around the thumb */
+}
+.notification-messages::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Background color of the scrollbar thumb on hover */
+}
+.ind-ove-part {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  column-gap: 10px;
+  padding: 10px 7px;
+}
+.ind-ove-part-img {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(243, 247, 249);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+}
+.ind-ove-part-img i {
+  color: rgb(1, 83, 116);
+  font-size: 16px;
+  transition: color .2s ease-in-out;
+}
+.ind-ove-part-p {
+  width: 240px;
+  cursor: pointer;
+}
+.ind-ove-part-p-title {
+  margin: 0;
+  color: black;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.ind-ove-part-p-description {
+  margin: 0;
+  color: rgb(143, 162, 171);
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.ind-ove-part-first,
+.ind-ove-part-second,
+.ind-ove-part-third,
+.ind-ove-part-fourth {
+  border-bottom: solid 1px rgb(243, 247, 249);
+}
+.ind-ove-dropdown,
+.notification-dropdown {
+  position: absolute;
+  top: 36px;
+  left: 16px;
+  margin-top: 10px;
+}
+.ind-ove-dropdown,
+.ind-ove-parts,
+.notification-dropdown,
+.notification-messages {
+  display: none;
+  transition: transform .32s cubic-bezier(0,0,0,1),opacity 80ms,-webkit-transform .32s cubic-bezier(0,0,0,1);
+}
+
+@media(max-width: 1100px) {
+  .header-title {
+    margin-left: 60px;
+  }
+  .header-buttons button {
+    font-size: 14px;
+    margin: 0;
+    margin-right: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .ind-ove-parts {
+    left: -80px;
+  }
+}
+
+@media (max-width: 850px) {
+  .ind-ove-parts {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+  .market-overview-container .ind-ove-parts {
+    margin-bottom: 50px;
+  }
+  .ind-ove-dropdown {
+    position: static;
+    height: 10px;
+  }
+  .ind-ove-dropdown img {
+    margin-bottom: 5px;
+  }
+  .ind-ove-part-p {
+    width: 150px;
+  }
+  .ind-ove-part {
+    column-gap: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ind-ove-part-p {
+    width: 120px;
+  }
+}
+
+/* check button in header */
+.checkbtn {
+  font-size: 22px;
+  float: right;
+  line-height: 80px;
+  margin-right: 12px;
+  margin-top: 7px;
+  cursor: pointer;
+  display: none;
+}
+.checkbtn .fa-bars {
+  color: white;
+  opacity: 0.97;
+}
+.checkbtn .fa-bars:hover {
+  opacity: 1;
+}
+#check {
+  display: none;
+}
+
+@media(max-width: 850px) {
+  .checkbtn {
+    display: block;
+  }
+  .header-buttons {
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    width: 100%;
+    max-width: 250px;
+    margin: 0;
+    padding: 15px;
+    padding-top: 35px;
+    background-color: rgb(21, 22, 33);
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    text-align: center;
+    transition: all 0.15s ease-in 0s normal;
+  }
+  .header-buttons button {
+    margin: 0;
+    width: 100%;
+    padding: 11.2px 14.4px;
+    border-bottom: 1px solid rgba(29, 31, 45, .62);
+  }
+  #check:checked ~ .header-buttons {
+    left: 0;
+  }
+}
+
+@media(max-width: 500px) {
+  .header-title {
+    margin-left: 20px;
+  }
+  .header-buttons {
+    max-width: 220px;
+  }
+}
+
+/* after header */
+.after-header {
+  height: 406px;
+  background: linear-gradient(to bottom right, #0e3a4a, #01132b);
+  position: relative;
+}
+.after-header-background {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.after-header-background img {
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  vertical-align: middle;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.change-header-background {
+  position: absolute;
+  top: 45px;
+}
+.change-header-background-color {
+  background-color: white;
+  box-shadow: 0 7px 17px rgba(0, 0, 0, .04);
+  border-bottom-color: white;
+}
+.after-header-pusher {
+  height: 160px;
+}
+.after-header-container {
+  text-align: center;
+  position: relative;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.after-header-container-title {
+  font-size: 35px;
+  font-weight: 700;  
+  font-family: Poppins, sans-serif;
+}
+.after-header-container-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(249, 252, 253);
+}
+
+/* Input */
+.after-header {
+  padding-bottom: 10px;
+}
+.input-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin-top: 30px;
+}
+.input-div input {
+  padding-left: 30px;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 500px;
+  border-radius: 25px;
+  border: none;
+  color: rgb(21, 22, 33);
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 12px 12px 30px 0 rgba(77, 77, 119, .1);
+  cursor: text;
+}
+.input-div input::placeholder {
+  color: #8ba2ad;
+  font-weight: 500;
+  font-size: 16px;
+}
+.input-button-div {
+  position: relative;
+}
+.input-div .input-button {
+  position: absolute;
+  right: 55px;
+  top: -19px;
+  background-image: linear-gradient(to right, #88d417, #80ac0d);
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input-div .input-button:hover {
+  opacity: 0.85;
+}
+.input-div .input-button .fa-search {
+  font-weight: 900;
+}
+.input-div .add-button {
+  position: absolute;
+  right: 10px;
+  top: -19px;
+  background-image: linear-gradient(to right, #5c5cfd, #d65ffd);
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input-div .add-button:hover {
+  opacity: 0.85;
+}
+.input-div .add-button .fa-plus {
+  font-weight: 900;
+}
+
+@media (max-width: 700px) {
+  .input-div input {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .input-div {
+    height: 50px;
+  }
+  .input-div input {
+    width: 90%;
+    font-size: 13px;
+    padding-left: 12px;
+  }
+  .input-div input::placeholder {
+    font-size: 13px
+  }
+}
+
+/* Header notification */
+.header-right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 70px;
+}
+.header-notification-counter-container {
+  position: relative;
+}
+.header-notification-counter {
+  position: absolute;
+  top: -20px;
+  background-color: red;
+  border-radius: 20px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 10px;
+}
+.header-notification {
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.97;
+}
+.header-notification:hover {
+  opacity: 1;
+}
+.header-notification .fa-bell {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  .header-right-side {
+    margin-right: 60px;
+  }
+  .header-notification {
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-right-side {
+    margin-right: 20px;
+  }
+}
+
+.notification-messages div {
+  color: rgb(33, 37, 41);
+  font-size: 15px;
+  padding: 16px 8px;
+  border-bottom: solid 1px rgb(207, 207, 207);
+}
+.notification-messages {
+  padding: 0px;
+}
+
+@media (max-width: 1100px) {
+  .notification-dropdown {
+    left: 7px;
+  }
+}
+
+@media (max-width: 500px) {
+  .notification-messages {
+    left: -240px;
+  }
+  .notification-dropdown {
+    left: 5px;
+  }
+}
